@@ -1,6 +1,7 @@
 package mypractice1;
 
 import io.restassured.RestAssured;
+import org.testng.Assert;
 import io.restassured.http.Header;
 import payload.PayloadEx;
 
@@ -15,7 +16,7 @@ public class PostExample {
 		String Response=given().log().all()//send the URI
 		.header("content-type","application/json")//This tells the server that the request body will be in JSON format.
 		.header("x-api-key","reqres-free-v1")
-		.body(PayloadEx.Addemp("Harry","qalead"))//pass the body
+		.body(PayloadEx.Addemp("Arati","Manager"))//pass the body
 		
 		.when().post("api/users")//send the endpoint
 		.then().log().all()//validate the response code

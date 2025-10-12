@@ -22,7 +22,7 @@ public class MyTest1 {
 	System.out.println(resString);
 	
 	
-	long resTime=res.getTime();
+	long resTime=res.getTime();//validate response time
 	
 	if(resTime>5000)
 	{
