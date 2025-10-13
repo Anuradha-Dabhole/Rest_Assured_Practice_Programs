@@ -28,7 +28,7 @@ public static void main(String[] args)
 	.then().log().all().assertThat().statusCode(200)
 	.extract().response().asString();
 	
-	 JsonPath js= new JsonPath(Response);//JavaScript Object Notation
+	 JsonPath js= new JsonPath(Response);//JavaScript Object Notation used for validate the response body
 	  String Actualmessage=js.getString("Msg");//fetch the msg from  the postman response body
 	 //-----msg validation with the help of assertion------
 	Assert.assertEquals(Actualmessage, ExpectedMessage);//hard assert terminate the program and soft assert not terminate the program
