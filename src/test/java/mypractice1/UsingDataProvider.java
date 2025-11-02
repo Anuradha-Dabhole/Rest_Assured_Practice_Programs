@@ -9,7 +9,8 @@ import io.restassured.RestAssured;
 import payload.PayloadEx;
 
 public class UsingDataProvider {
-@DataProvider(name="booksdata")
+
+	@DataProvider(name="booksdata")
 public Object[] [] getData()
 {
 	return new Object[][]

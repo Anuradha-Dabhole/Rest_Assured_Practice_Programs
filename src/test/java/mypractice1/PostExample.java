@@ -16,7 +16,7 @@ public class PostExample {
 		String Response=given().log().all()//send the URI
 		.header("content-type","application/json")//This tells the server that the request body will be in JSON format.
 		.header("x-api-key","reqres-free-v1")
-		.body(PayloadEx.Addemp("Arati","Manager"))//pass the body
+		.body(PayloadEx.Addemp("Arati","QA"))//pass the body
 		
 		.when().post("api/users")//send the endpoint
 		.then().log().all()//validate the response code

@@ -1,7 +1,4 @@
 package mypractice1;
-
-
-
 import org.testng.Assert;
 
 import MockResponse.CourceDetails;
