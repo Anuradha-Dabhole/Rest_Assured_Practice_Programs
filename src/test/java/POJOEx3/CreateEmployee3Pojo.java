@@ -34,19 +34,20 @@ public class CreateEmployee3Pojo {
         
         ObjectMapper n1 = new ObjectMapper();
         
-       String Response= n1.writerWithDefaultPrettyPrinter().writeValueAsString(n1);
+       String JoinRequest= n1.writerWithDefaultPrettyPrinter().writeValueAsString(emp1);
 
 RestAssured.baseURI="https://reqres.in/";//post example
 String Response1=given().log().all()//send the URI
 .header("content-type","application/json")//This tells the server that the request body will be in JSON format.
 .header("x-api-key","reqres-free-v1")
-.body(n1)//pass the body
+.body(JoinRequest)//pass the body
 
 .when().post("api/users")//send the endpoint
 .then().log().all()//validate the response code
 
 .assertThat().statusCode(201)
 .extract().response().asString();//Converts it to a String and stores it in the variable Response
+System.out.println(JoinRequest);
 System.out.println(Response1);
         
 	}
